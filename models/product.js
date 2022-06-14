@@ -6,7 +6,7 @@ const productSchema = new mongoose.Schema({
 		required: [true, 'product name must be provided'],
 	},
 
-	prince: {
+	price: {
 		type: Number,
 		required: [true, 'product price must be provided'],
 	},
@@ -23,8 +23,8 @@ const productSchema = new mongoose.Schema({
 	company: {
 		type: String,
 		enum: {
-			value: ['ikea', 'liddy', 'caressa', 'marcos'],
-			message: '{VALUE} isnot supported',
+			values: ['ikea', 'liddy', 'caressa', 'marcos'],
+			message: '{VALUE} is not supported',
 		},
 	},
 });
